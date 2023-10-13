@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addsVM" type="com.paulsapplication.app.modules.adds.data.viewmodel.AddsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAdds"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblack_900">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearStoriescontent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_1pxh"
+            android:layout_marginStart="@dimen/_4pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearStoriesBar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8pxh"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageLines"
+                    android:layout_height="@dimen/_2pxh"
+                    android:layout_width="@dimen/_124pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_lines"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_lines"/>
+                <View android:background="@color/white_A700_4c"
+                    android:id="@+id/lineLineFour"
+                    android:layout_height="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_weight="0.33" android:layout_width="0dp"/>
+                <View android:background="@color/white_A700_4c"
+                    android:id="@+id/lineLineFive"
+                    android:layout_height="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_weight="0.33" android:layout_width="0dp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearInput"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_626pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumnavatarchange"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_weight="0.09"
+                    android:layout_width="0dp"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius_4">
+                    <ImageView android:gravity="start"
+                        android:id="@+id/imageAvatarChange"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_avatarchange}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_avatarchange"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearNameSponsore"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.74"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearNameBlueTic"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_3pxv"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtBrandName"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_3pxh"
+                            android:singleLine="true"
+                            android:text="@{addsVM.addsModel.txtBrandName}"
+                            style="@style/txtIntersemibold14" tools:text="@string/lbl_brand_name"/>
+                        <ImageView android:id="@+id/imageCheckmark"
+                            android:layout_height="@dimen/_9pxh"
+                            android:layout_marginBottom="@dimen/_4pxv"
+                            android:layout_marginStart="@dimen/_4pxh"
+                            android:layout_marginTop="@dimen/_3pxv"
+                            android:layout_width="@dimen/_9pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSponsored"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+                        android:text="@{addsVM.addsModel.txtSponsored}"
+                        style="@style/txtIntermedium12" tools:text="@string/lbl_sponsored"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageCut"
+                    android:layout_height="@dimen/_19pxh"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_width="@dimen/_56pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_cut"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_cut"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearShopInstallB"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_18pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnarrowup"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.91" android:layout_width="0dp" android:orientation="vertical">
+                <ImageView android:id="@+id/imageArrowup"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_marginEnd="@dimen/_44pxh"
+                    android:layout_marginStart="@dimen/_44pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowup"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowup"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnShopNow"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_44pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_width="@dimen/_106pxh"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_18pxh"
+                    android:paddingStart="@dimen/_18pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_shop_now"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_3" tools:text="@string/lbl_shop_now"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageSend"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_marginBottom="@dimen/_19pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_send"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_send"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listphotoFourRowModel" type="com.paulsapplication.app.modules.messages.data.model.ListphotoFourRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearPerson"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/framePhoto"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_58pxv" android:layout_width="@dimen/_58pxh">
+            <ImageView android:id="@+id/imagePhotoFour"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_58pxh"
+                android:layout_width="@dimen/_58pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_photo_58x58}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_photo_58x58"/>
+            <ImageView android:id="@+id/imagePhotoOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_58pxh"
+                android:layout_width="@dimen/_58pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_photo_3}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_photo_3"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtNameThree"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listphotoFourRowModel.txtNameThree}"
+            style="@style/txtAsapromanbold14_1" tools:text="@string/lbl_sophia"/>
+    </LinearLayout>
+</layout>
